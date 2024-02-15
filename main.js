@@ -25,7 +25,7 @@ const progressBar = document.getElementById("progress-bar");
 const playListContainer = document.getElementById("playlist-container");
 const currentProgress = document.getElementById("current-progress");
 
-const closeButton = document.getElementById("close");
+const closeButton= document.getElementById('close-button')
 const playListSongs = document.getElementById("playlist-songs");
 
 //şarkı sırası
@@ -136,14 +136,14 @@ const pauseAudio = () => {
 //şarkı listesini oluştur
 const initializePlaylist = () => {  
   for (let i in songLists) {
-    playListContainer.innerHTML += `  
+    playListSongs.innerHTML += `  
     <li class="playlistSong" onclick="setSong(${i})">
     <div class="playlist-image-container">
     <img src="${songLists[i].image}"/>
 </div>
 <div class="playlist-song-details">
     <span id="playlist-song-name">${songLists[i].name}</span>
-    <span id="playlist-song-artist-name">${songLists[i].artist}</span>
+    <span id="playlist-song-artist-album">${songLists[i].artist}</span>
 </div>
     </li>
        `;
